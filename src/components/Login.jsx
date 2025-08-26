@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { app } from '../firebase/firebase-config'; // Importe a instância do app do seu arquivo de configuração
-import './Login.css'; // Opcional, para estilização básica
+import '../style.css'; // Opcional, para estilização básica
 
 // Inicializa a autenticação
 const auth = getAuth(app);

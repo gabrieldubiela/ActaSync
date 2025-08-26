@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { collection, doc, getDoc, setDoc, query, onSnapshot, where } from 'firebase/firestore';
 import { db } from '../firebase/firebase-config';
 import config from '../config.json'; // Importa a configuração local
-import { getPronome } from '../utils/pronome'; // Importa a função de pronome
-import './AtaForm.css'; // Estilização opcional
+import { getPronome } from '../utils/pronome.js'; // Importa a função de pronome
+import '../style.css'; // Estilização opcional
 
 const AtaForm = ({ ataId }) => {
   const [ata, setAta] = useState({

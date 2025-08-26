@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { collection, query, onSnapshot, where, orderBy } from 'firebase/firestore';
 import { db } from '../firebase/firebase-config';
-import { getTempoDiscurso } from '../utils/temposOradores';
-import { gerarMensagemConvite } from '../utils/mensagemConvite';
-import { gerarMensagemConfirmacao } from '../utils/mensagemConfirmacao';
+import { getTempoDiscurso } from '../utils/temposOradores.js';
+import { gerarMensagemConvite } from '../utils/mensagemConvite.js';
+import { gerarMensagemConfirmacao } from '../utils/mensagemConfirmacao.js';
 
 const Calendario = () => {
   const [domingos, setDomingos] = useState([]);

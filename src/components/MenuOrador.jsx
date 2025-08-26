@@ -1,7 +1,7 @@
 import React from 'react';
-import { geradorMensagemConvite } from '../utils/mensagemConvite';
-import { geradorMensagemConfirmacao } from '../utils/mensagemConfirmacao';
-import { getTempoDiscurso } from '../utils/temposOradores';
+import { geradorMensagemConvite } from '../utils/mensagemConvite.js';
+import { geradorMensagemConfirmacao } from '../utils/mensagemConfirmacao.js';
+import { getTempoDiscurso } from '../utils/temposOradores.js';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import PDFGenerator from './PDFGenerator';
 
