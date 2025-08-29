@@ -1,0 +1,52 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "users": {
+      "$uid": {
+        ".read": "$uid === auth.uid || root.child('users').child(auth.uid).child('role').val() === 'admin'",
+        ".write": "$uid === auth.uid || root.child('users').child(auth.uid).child('role').val() === 'admin'"
+      }
+    },
+    "membros": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".indexOn": ["nome", "classificacao", "data_ultimo_discurso"]
+    },
+    "chamados": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".indexOn": ["nome"]
+    },
+    "hinos": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".indexOn": ["numero", "titulo"]
+    },
+    "calendario": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".indexOn": ["data"]
+    },
+    "atas": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".indexOn": ["data", "modo"]
+    },
+    "oradores": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".indexOn": ["calendario_id", "ata_id", "posicao"]
+    },
+    "apoios_desobrigacoes": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".indexOn": ["ata_id"]
+    },
+    "anuncios": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      ".indexOn": ["ata_id", "data_hora"]
+    }
+  }
+}
